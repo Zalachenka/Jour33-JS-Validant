@@ -39,7 +39,7 @@ entrepreneurs.forEach(dude => {
 })
 
 orderNames = []
-console.log("Voici les noms des entrepreneurs triés par ordre alphabétique du nom de famille:")
+console.log("Voici les entrepreneurs triés par ordre alphabétique du nom de famille:")
 entrepreneurs.forEach(name => {
   orderNames.push(name.last + " " + name.first);
 });

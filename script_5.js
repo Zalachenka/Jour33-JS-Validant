@@ -21,10 +21,47 @@ for (let i in books) {
 rentedCount = []
 books.forEach(count => {
   rentedCount.push(count.rented);
-})
-console.log(rentedCount)
+    })
+
 books.forEach(rent => {
   var maxRent = Math.max(...rentedCount)
-  maxRent = maxRent.title
-  console.log(`${maxRent} est le livre ayant été le plus emprunté.`)
+  for (let i in books) {
+  if (books[i].rented == maxRent)
+    console.log(`Le livre ayant été le plus emprunté est "${books[i].title}".`);
+      } 
+    })
+
+books.forEach(rent => {
+  var minRent = Math.min(...rentedCount)
+  for (let i in books) {
+  if (books[i].rented == minRent)
+    console.log(`Le livre ayant été le moins emprunté est "${books[i].title}".`);
+      } 
+    })
+
+idNumber = []
+books.forEach(num => {
+  idNumber.push(num.id);
+    })
+var numId = idNumber.find(function(identification) {
+  for (let i in books) {
+    if (books[i].id === 873495)
+      console.log(`Le livre portant l'id 873495 est "${books[i].title}.`)
+  }
 })
+books.forEach(num => {
+  idNumber.push(num.id);
+    })
+
+  for (let i in books) {
+    if (books[i].id === 133712) {
+         console.log(`Le livre ${books[i].title} a été supprimé de la liste.`)
+      delete books[i]
+    }  
+  };
+orderNames = []
+console.log("Voici les livres triés par ordre alphabétique:")
+books.forEach(name => {
+  orderNames.push(name.title);
+});
+console.log(orderNames.sort())
