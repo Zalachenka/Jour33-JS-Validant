@@ -1,12 +1,11 @@
 function generatePyramid() {
-    var p = prompt("Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?");
-    var output = "";
-    for (var i = 1; i <= p; i++) {
-        for (var j = 1; j <= i; j++) {
-            output+="*" + "";
-        }
-        console.log(output);
-        output="";
-    }
-}  
+   {
+    let p = prompt("Combien d'étages veux-tu à la pyramide ?");
+    let i = 1;
+    do {
+        console.log(" ".repeat(p - i) + "#".repeat(i))
+        i ++ }
+    	 while (i <= p);
+	}
+}
 console.log(generatePyramid())
